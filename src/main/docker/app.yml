@@ -1,0 +1,46 @@
+version: '2'
+services:
+  rjmd-app:
+    image: rjmd
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_CLOUD_CONSUL_HOST=consul
+      - SPRING_CLOUD_CONSUL_PORT=8500
+      - SPRING_DATA_MONGODB_URI=mongodb://rjmd-mongodb:27017/?waitQueueMultiple=1000
+      - SPRING_DATA_MONGODB_DATABASE=rjmd
+      - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
+      - SPRING_DATA_JEST_URI=http://rjmd-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://rjmd-elasticsearch:9200
+      - KAFKA_BOOTSTRAPSERVERS=kafka:9092
+    ports:
+      - 8080:8080
+  rjmd-mongodb:
+    extends:
+      file: mongodb.yml
+      service: rjmd-mongodb
+  rjmd-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: rjmd-elasticsearch
+  kafka:
+    extends:
+      file: kafka.yml
+      service: kafka
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+  zookeeper:
+    extends:
+      file: kafka.yml
+      service: zookeeper
+  consul:
+    extends:
+      file: consul.yml
+      service: consul
+
+  consul-config-loader:
+    extends:
+      file: consul.yml
+      service: consul-config-loader

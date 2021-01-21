@@ -1,0 +1,65 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.isme.nunu",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "gateway",
+    "baseName": "rjmd",
+    "packageName": "com.isme.nunu",
+    "packageFolder": "com/isme/nunu",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "messageBroker": "kafka",
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "Njk1YTUzNjE3YmU4MDNjNDJlY2ZhNjk5MTI0NjY3MTEzN2U3MTFlODEzNzM2Yzg4MzlhY2VjYWEwOTNiNTlkNDE2YTJiZDUwOTQyODc4ZjYzY2EyNmQ1ZTIxN2E4OTkwNzg3MTYxOWQ5NDYyZTllMTdkOTNlMmFjNmU5OGZlNTg=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "cyborg",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1611228345601,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-primeng",
+        "version": "9.1.0"
+      },
+      {
+        "name": "generator-jhipster-kafka",
+        "version": "1.0.1"
+      },
+      {
+        "name": "generator-jhipster-ngx-charts",
+        "version": "1.0.3"
+      },
+      {
+        "name": "generator-jhipster-file-handling",
+        "version": "1.1.1"
+      },
+      {
+        "name": "generator-jhipster-safe-extensions",
+        "version": "0.0.2"
+      }
+    ],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "vi"],
+    "blueprints": [],
+    "reactive": true
+  }
+}
