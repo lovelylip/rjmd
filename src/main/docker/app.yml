@@ -15,7 +15,7 @@ services:
       - SPRING_ELASTICSEARCH_REST_URIS=http://rjmd-elasticsearch:9200
       - KAFKA_BOOTSTRAPSERVERS=kafka:9092
     ports:
-      - 8080:8080
+      - 8081:8081
   rjmd-mongodb:
     extends:
       file: mongodb.yml

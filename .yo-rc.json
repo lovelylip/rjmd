@@ -9,7 +9,7 @@
     "baseName": "rjmd",
     "packageName": "com.isme.nunu",
     "packageFolder": "com/isme/nunu",
-    "serverPort": "8080",
+    "serverPort": "8081",
     "authenticationType": "jwt",
     "cacheProvider": "no",
     "enableHibernateCache": false,
